@@ -12,7 +12,7 @@
 
 <h5>Result</h5>
 <ng-container *ngIf="weather$ | async as weather">
-    <p>Celsius : {{weather.celsius}}</p>
-    <p>Kelvin: {{weather.kelvin}}</p>
-    <p>Fahrenheit: {{weather.fahrenheit}}</p>
+    <p>Celsius : {{weather.celsius.toFixed(2)}}</p>
+    <p>Kelvin: {{weather.kelvin.toFixed(2)}}</p>
+    <p>Fahrenheit: {{weather.fahrenheit.toFixed(2)}}</p>
 </ng-container>
