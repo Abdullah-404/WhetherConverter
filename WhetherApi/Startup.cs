@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WhetherApi.Services;
+using WhetherApi.Contracts;
 
 namespace WhetherApi
 {
@@ -26,6 +28,7 @@ namespace WhetherApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped<IWeatherConverterService, WeatherConverterService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
