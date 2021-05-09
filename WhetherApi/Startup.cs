@@ -28,6 +28,16 @@ namespace WhetherApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options => {
+                options.AddPolicy(
+                    name: "AllowOrigin",
+                    builder => {
+                        builder.AllowAnyOrigin()
+                                .AllowAnyMethod()
+                                .AllowAnyHeader();
+                    }
+                );
+            });
             services.AddScoped<IWeatherConverterService, WeatherConverterService>();
         }
 
@@ -38,6 +48,8 @@ namespace WhetherApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("AllowOrigin");
 
             app.UseHttpsRedirection();
 
