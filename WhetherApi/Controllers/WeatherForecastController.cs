@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WhetherApi.Contracts;
+using WhetherApi.Enums;
 
 namespace WhetherApi.Controllers
 {

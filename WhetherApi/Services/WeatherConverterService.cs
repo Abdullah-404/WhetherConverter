@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using WhetherApi.Contracts;
+using WhetherApi.Enums;
 
 namespace WhetherApi.Services
 {

@@ -1,6 +1,9 @@
-public enum TemperatureType
+namespace WhetherApi.Enums
 {
-    Celsius,
-    Kelvin,
-    Fahrenheit
+    public enum TemperatureType 
+    {
+        Celsius,
+        Kelvin,
+        Fahrenheit
+    }
 }
